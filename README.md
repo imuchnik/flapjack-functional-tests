@@ -29,6 +29,12 @@ beforeEach(function() {
   });
   ```
   
+
+####Going Forward...
+
+we should follow Page Object model. 
+  
+Here is [good starting point](http://www.thoughtworks.com/insights/blog/using-page-objects-overcome-protractors-shortcomings)
   
 Enjoy! :relieved:
   
