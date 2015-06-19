@@ -1,6 +1,9 @@
 Quick start:
         
 ```sh
+# Download this repo:
+$ git clone git@github.com:imuchnik/flapjack-functional-tests.git && cd flapjack-functional-tests
+
 # Install Protractor (it will also automagically install webdriver-manager):
 $ npm install -g protractor
 
