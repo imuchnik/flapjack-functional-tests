@@ -1,29 +1,19 @@
 Quick start:
         
-        
-      $ npm install -g protractor
-        
-This will install two command line tools, protractor and webdriver-manager. Try running protractor --version to make sure it's working.
+```sh
+# Install Protractor (it will also automagically install webdriver-manager):
+$ npm install -g protractor
 
-The webdriver-manager is a helper tool to easily get an instance of a Selenium Server running. Use it to download the necessary binaries with:
+# Download Selenium Server binaries:
+$ webdriver-manager update
 
-        $webdriver-manager update
-  
-  
-  Now start up a server with:
+# Start Selenium Server:
+$ webdriver-manager start
 
-        $ webdriver-manager start
-        
-  This will start up a Selenium Server and will output a bunch of info logs. 
-  Your Protractor test will send requests to this server to control a local browser.
-  Leave this server running throughout the tutorial. 
-  You can see information about the status of the server at http://localhost:4444/wd/hub.
-  
-  
-  To run the tests:
-          
-          
-          $ protractor conf.json
-  
-  
+# Open a new tab and tell protractor to start testing:
+$ protractor conf.js
+```
 
+Try editing `FJ-about-smoke-spec.js` and re-running `protractor conf.js`. [Here](http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements) are the different ways to select elements on a page.  Protractor uses Jasmine for its test syntax so check out how to write [expectations](http://jasmine.github.io/2.0/introduction.html#section-Expectations).
+
+Enjoy! :relieved:
