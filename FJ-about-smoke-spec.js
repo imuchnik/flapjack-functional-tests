@@ -1,22 +1,19 @@
-describe('Linking to a tool', function(){
-	beforeEach(function() {
+describe('The new consumerfinance.gov', function() {
+
+  beforeEach(function() {
     return browser.ignoreSynchronization = true;
   });
 
-	it('navigate to the page', function(){
+  it('should properly load in a browser', function(){
+    browser.get('http://beta.consumerfinance.gov/'); // This could be set to a staging server or localhost.
+    expect(browser.getTitle()).toBe('Consumer Financial Protection Bureau');
+  });
 
-	    browser.get('http://beta.consumerfinance.gov/');
-		expect(browser.getTitle()).toBe('Consumer Financial Protection Bureau');
-	});
-
-	it('should click on something', function(){
-
-       browser.get('http://beta.consumerfinance.gov/contact-us');
-       var phoneLink = '411-CFPB'
-       var phoneElement = element(by.partialLinkText(phoneLink));
-
-       expect(phoneElement.getText()).toBeDefined();
-
-	});
+  it('should show the correct phone number', function(){
+    browser.get('http://beta.consumerfinance.gov/contact-us');
+    var phoneNumber = '(855) 411-CFPB (2372)'
+    var phoneElement = element(by.partialLinkText(phoneNumber));
+    expect(phoneElement.getText()).toBeDefined();
+  });
 
 });
