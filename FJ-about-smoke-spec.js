@@ -1,5 +1,6 @@
 describe( 'Beta Contact Page', function() {
-  var baseURL = 'http://beta.consumerfinance.gov/';
+  var passedURL = browser.params.base_url;
+  var baseURL = passedURL ? passedURL : 'http://beta.consumerfinance.gov/';
   var contactURL = baseURL + 'contact-us/';
   var phoneClass = 'list_link__phone';
 
@@ -55,4 +56,3 @@ describe( 'Beta Contact Page', function() {
     expect( lastOffice.getText() ).toMatch( 'Your Money, Your Goals Toolkit' );
   } );
 } );
-
