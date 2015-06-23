@@ -4,10 +4,6 @@ describe( 'Beta Contact Page', function() {
   var contactURL = baseURL + 'contact-us/';
   var phoneClass = 'list_link__phone';
 
-  beforeEach( function() {
-    return browser.ignoreSynchronization = true;
-  } );
-
   it( 'should properly load in a browser', function(){
     browser.get( contactURL ); // This could be set to a staging server or localhost.
     expect( browser.getTitle() ).toBe( 'Contact us' );
@@ -26,15 +22,15 @@ describe( 'Beta Contact Page', function() {
     expect( secondPhone.getAttribute( 'href' ) ).toBe( 'tel:8557292372' );
   } );
 
-/* This hasn't been released to beta yet
-  it( 'should link to Submit a Complaint page', function() {
+// This hasn't been released to beta yet
+  xit( 'should link to Submit a Complaint page', function() {
     var complaintLink = element( by.partialLinkText( 'Submit a complaint' ) );
 
     expect( complaintLink.getText() ).toBeDefined();
     expect( complaintLink.getAttribute( 'href' ) ).toMatch( '/complaint/' );
     expect( complaintLink.getAttribute( 'class' ) ).toMatch( 'jump-link__right' );
   } );
-*/
+
   it( 'should include General Inquiries contact details', function() {
     var GIEmail = element( by.partialLinkText( 'info@consumerfinance.gov' ) );
     var GIPhone = element( by.partialLinkText( '(202) 435-7000' ) );
