@@ -24,9 +24,7 @@ exports.config = {
   ],
 
   onPrepare: function() {
-    global.isAngularSite = function() {
-      browser.ignoreSynchronization = true;
-    };
+    return browser.ignoreSynchronization = true;
   },
 
   specs: ['FJ-about-smoke-spec.js']
