@@ -1,33 +1,39 @@
+var env = require('./env.js');
+
 exports.config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  multiCapabilities: [
-    {
-      'browserName': 'chrome'
-    },{
-      'browserName': 'chrome'
-    },{
-      'browserName': 'phantomjs',
+  capabilities: {'browserName': 'chrome'},
 
-      /*
-       * Can be used to specify the phantomjs binary path.
-       * This can generally be ommitted if you installed phantomjs globally.
-       */
-      'phantomjs.binary.path': require('phantomjs').path,
+  //suites: {
+  //  homepage: 'tests/e2e/homepage/**/*Spec.js',
+  //  search: ['tests/e2e/contact_search/**/*Spec.js']
+  //},
 
-      /*
-       * Command line args to pass to ghostdriver, phantomjs's browser driver.
-       * See https://github.com/detro/ghostdriver#faq
-       */
-      'phantomjs.ghostdriver.cli.args': ['--loglevel=DEBUG']
-
-    }
-  ],
-
+  // This can be changed via the command line as:
+  // --params.login.user 'ngrocks'
   onPrepare: function() {
-    global.isAngularSite = function() {
-      browser.ignoreSynchronization = true;
-    };
+
+
+    //var folderName = (new Date()).toString().split(' ').splice(1, 4).join(' ');
+    //var mkdirp = require('mkdirp');
+    //var newFolder = "./reports/" + folderName;
+    //require('jasmine-reporters');
+    //
+    //mkdirp(newFolder, function(err) {
+    //  if (err) {
+    //    console.error(err);
+    //  } else {
+    //    jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter(newFolder, true, true));
+    //  }
+    //});
+    //jasmine.getEnv().addReporter(new jasmine.JUnitXmlReporter('xmloutput', true, true));
+    browser.driver.manage().window().setSize(1600, 800);
+    browser.ignoreSynchronization = true;
   },
 
   specs: ['FJ-about-smoke-spec.js']
 };
+//protractor protractor.conf.js --suite homepage
+//npm install jasmine-reporters
+//npm install mkdirp
+
