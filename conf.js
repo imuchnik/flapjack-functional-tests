@@ -1,7 +1,7 @@
 var env = require('./env.js');
 
 exports.config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  //seleniumAddress: 'http://localhost:4444/wd/hub',
   capabilities: {'browserName': 'chrome'},
   sauceUser: "davisd",
   sauceKey:'ee6e40da-42dd-45cf-b622-e16444393f3c',
