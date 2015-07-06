@@ -1,0 +1,22 @@
+{
+  "name": "Fj-functional-tests",
+  "version": "1.0.0",
+  "description": "Quick start:",
+  "main": "FJ-about-smoke-spec.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imuchnik/flapjack-functional-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imuchnik/flapjack-functional-tests/issues"
+  },
+  "homepage": "https://github.com/imuchnik/flapjack-functional-tests",
+  "devDependencies": {
+    "jasmine-reporters": "^2.0.7"
+  }
+}
