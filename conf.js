@@ -26,8 +26,8 @@ sauceKey:'2f025b43-99f8-4674-9570-ee5319147cae',
     browser.driver.manage().window().setSize(1600, 800);
     browser.ignoreSynchronization = true;
 
-    var folderName = (new Date()).toString().split(' ').splice(1, 4).join('-');
-    var newFolder = "reports/" + folderName;
+   // var folderName = (new Date()).toString().split(' ').splice(1, 4).join('-');
+    var newFolder = "reports/"
 
     mkdirp(newFolder, function( err ) {
         if (err) {
