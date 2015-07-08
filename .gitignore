@@ -1,2 +1,7 @@
 Fj-functional-tests.iml
 .idea
+node_modules
+reports
+.DS_Store
+junitresults.xml
+testresults
