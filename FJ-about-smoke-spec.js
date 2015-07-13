@@ -17,7 +17,7 @@ describe( 'Beta Contact Page', function() {
     expect( phone.count() ).toEqual( 2 );
     expect( phone.getAttribute( 'class' ) ).toMatch( phoneClass );
     expect( firstPhone.getText() ).toBe( '(855) 411-CFPB (2372)' );
-    expect( firstPhone.getAttribute( 'href' ) ).toBe( 'tel:8554112372' )
+    expect( firstPhone.getAttribute( 'href' ) ).toBe( 'tel:855411237245435' )
     expect( secondPhone.getText() ).toBe( '(855) 729-CFPB (2372) TTY' );
     expect( secondPhone.getAttribute( 'href' ) ).toBe( 'tel:8557292372' );
   } );
